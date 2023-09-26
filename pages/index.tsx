@@ -1,29 +1,8 @@
 import type { NextPage } from 'next';
-import { Builder, Workspace, item, branch } from 'build-ui';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import AlertTools from '../ui/alert/AlertTools';
-import AlertView from '../ui/alert/AlertView';
-import SectionView from '../ui/section/SectionView';
-
-const MyBuilder = () => {
-	const section = item({
-		type: 'Section',
-		props: {},
-	});
-	const tree = branch(section);
-	const view = {
-		Section: SectionView,
-		Alert: AlertView,
-	};
-	return (
-		<Builder initialTree={tree}>
-			<Workspace view={view} />
-			<AlertTools />
-		</Builder>
-	);
-};
+import MyBuilder from './builder/MyBuilder';
 
 const Home: NextPage = () => {
 	return (

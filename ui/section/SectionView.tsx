@@ -1,6 +1,5 @@
 import { DnDBuilder, useEditor } from 'build-ui';
 import Section from './Section';
-import { type } from 'os';
 
 type SectionViewProps = {
 	id: string;
